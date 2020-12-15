@@ -2,9 +2,73 @@
 <html>
     <head>
         <title>ДантистЪ - Стоматологическая клиника</title>
+        <style>
+            html, body {
+                margin: 0;
+                background-color: #B81140;
+                color: white;
+            }
+            a {
+                color: white;
+            }
+            .container {
+                margin: 0 auto;
+                max-width: 1080px;
+            }
+            .Header {
+                background-color: rgba(255,255,255, 0.1);
+            }
+            .Header__top {
+                border-bottom: 1px solid rgba(255,255,255, 0.2);
+            }
+            .Header__topContent {
+                display: flex;
+                justify-content: space-between;
+                padding: 8px 0;
+            }
+            .Header__bot {
+                display: flex;
+                justify-content: space-between;
+                padding: 16px 0;
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+            }
+            .Header__logo {
+                font-size: 64px;
+            }
+
+            .TitleScreen {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 60vh;
+            }
+        </style>
     </head>
     <body>
-        <h1>ДантистЪ</h1>
-        <p>Сайт находится в разработке, для записи обращайтесь по телефону <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a></p>
+        <header class="Header">
+            <div class="Header__top">
+                <div class="container Header__topContent">
+                    <div class="Header__topLeft">
+                        <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a>
+                    </div>
+                    <div class="Header__topRight">
+                        <!-- Social Links -->
+                        <a href="tel:+74983197171">+7 (498) 319 - 71 - 71</a>
+                    </div>
+                </div>
+            </div>
+            <div class="Header__bot">
+                <div class="container">
+                    <div class="Header__logo">
+                        ДантистЪ
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="TitleScreen">
+                <p>Сайт находится в разработке, для записи обращайтесь по телефону <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a></p>
+            </div>
+        </main>
     </body>
 </html>
