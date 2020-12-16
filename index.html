@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="urf-8" />
         <title>ДантистЪ - Стоматологическая клиника</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -14,7 +15,9 @@
             }
             .container {
                 margin: 0 auto;
-                max-width: 1080px;
+                padding-left: 5px;
+                padding-right: 5px;
+                max-width: 1200px;
             }
             .Header {
                 background-color: rgba(255,255,255, 0.1);
@@ -25,55 +28,203 @@
             .Header__topContent {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 flex-wrap: wrap;
-                padding: 8px 0;
+                padding-top: 8px;
+                padding-bottom: 8px;
             }
             .Header__bot {
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+            }
+            .Header__botContent {
                 display: flex;
                 justify-content: space-between;
                 padding: 16px 0;
-                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
             }
             .Header__logo {
-                font-size: 56px;
+                min-width: 294px;
+                height: 48px;
+                background-image: url('./assets/img/dtl.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                font-size: 0;
+            }
+
+            .Nav {
+                display: flex;
+            }
+            .Nav__list {
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+            .Nav__item {
+                list-style-type: none;
+            }
+            .Nav__link {
+                padding: 4px 12px;
+                color: white;
+                text-decoration: none;
+            }
+            .Nav__link:hover,
+            .Nav__link:focus {
+                border-bottom: 2px solid white;
+            }
+            .Nav__link:active,
+            .Nav__link.active {
+                border-bottom: 2px solid white;
+            }
+
+            .Header__phoneLink {
+                font-size: 12px;
+                text-decoration: none;
+            }
+            .Header__phoneLink:hover,
+            .Header__phoneLink:focus {
+                text-decoration: underline;
+            }
+            .Header__phoneLinkImage {
+                vertical-align: middle;
+                margin-right: 4px;
             }
 
             .TitleScreen {
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-position: fixed;
+                background-image: url('./assets/img/bg.jpg');
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+            }
+            .MainBanner {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 60vh;
+                padding: 12px;
+            }
+
+            .NavButton {
+                display: none;
+                background: none;
+                border: 0;
+            }
+
+            @media screen and (max-width: 680px) {
+                .Header__phoneLink:nth-child(2) {
+                    display: none;
+                }
+                .Header__logo {
+                    min-width: 150px;
+                    height: 28px;
+                    margin-left: 5px;
+                }
+                .NavButton {
+                    display: block;
+                }
+                .Nav {
+                    display: none;
+                }
+            }
+            .ModalMenu {
+                display: none;
             }
         </style>
+        <link rel="stylesheet" href="./assets/css/main.css" />
     </head>
     <body>
-        <header class="Header">
-            <div class="Header__top">
-                <div class="container Header__topContent">
-                    <div class="Header__topLeft">
-                        <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a>
+        <main>
+            <div class="TitleScreen">
+                <header class="Header">
+                    <div class="Header__top">
+                        <div class="container Header__topContent">
+                            <div class="Header__topLeft Header__phoneLinks">
+                                <a class="Header__phoneLink" href="tel:+79167482172"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/phone.svg"/>+7 (916) 748 - 21 - 72</a>
+                                <a class="Header__phoneLink" href="tel:+74983197171"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/phone.svg"/>+7 (498) 319 - 71 - 71</a>
+                            </div>
+                            <div class="Header__topRight">
+                                <a class="Header__phoneLink" href="https://instagram.com/dantist_ko"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/instagram.svg"/>dantist_ko</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="Header__topRight">
-                        <!-- Social Links -->
+                    <div class="Header__bot">
+                        <div class="container Header__botContent">
+                            <div class="Header__logo">
+                                ДантистЪ
+                            </div>
+                            <button class="NavButton" aria-label="Открыть меню">
+                                <img src="./assets/img/menu.svg" />
+                            </button>
+                            <nav class="Nav">
+                                <ul class="Nav__list">
+                                    <li class="Nav__item"><a class="Nav__link" href="#">One</a></li>
+                                    <li class="Nav__item"><a class="Nav__link" href="#">Two</a></li>
+                                    <li class="Nav__item"><a class="Nav__link" href="#">Three</a></li>
+                                    <li class="Nav__item"><a class="Nav__link" href="#">Four</a></li>
+                                    <li class="Nav__item"><a class="Nav__link" href="#">Five</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="MainBanner">
+                    <p>Сайт находится в разработке, для записи обращайтесь по телефону <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a></p>
+                    <br>
+                    <address>Истринский р-н, деревня Борзые, тер. коттеджного поселка Княжье озеро</address>
+                </div>
+            </div>
+            <div class="container ContactsBlock">
+                <div class="ContactsBlock__item ContactsBlock__item--phone">
+                    <h2 class="ContactsBlock__header">Телефон</h2>
+                    <div class="ContactsBlock__value">
+                        <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a>
+                        <br />
                         <a href="tel:+74983197171">+7 (498) 319 - 71 - 71</a>
                     </div>
                 </div>
-            </div>
-            <div class="Header__bot">
-                <div class="container">
-                    <div class="Header__logo">
-                        ДантистЪ
+                <div class="ContactsBlock__item ContactsBlock__item--email">
+                    <h2 class="ContactsBlock__header">E-Mail</h2>
+                    <div class="ContactsBlock__value">
+                        <a href="mailto:info@dantist-ko.ru">info@dantist-ko.ru</a>
+                    </div>
+                </div>
+                <div class="ContactsBlock__item ContactsBlock__item--location">
+                    <h2 class="ContactsBlock__header">Местоположение</h2>
+                    <div class="ContactsBlock__value">
+                        <address>Истринский р-н, деревня Борзые, тер. коттеджного поселка Княжье озеро</address>
                     </div>
                 </div>
             </div>
-        </header>
-        <main>
-            <div class="TitleScreen">
-                <p>Сайт находится в разработке, для записи обращайтесь по телефону <a href="tel:+79167482172">+7 (916) 748 - 21 - 72</a></p>
-                <br>
-                <address>Истринский р-н, деревня Борзые, тер. коттеджного поселка Княжье озеро</address>
+            <div id="modal-menu" class="ModalMenu">
+                <div class="ModalMenu__header">
+                    <div>Меню</div>
+                    <button id="modal-menu-close" aria-label="Закрыть меню">
+                        <img src="./assets/img/close.svg" />
+                    </button>
+                </div>
+                <div class="ModalMenu__body">
+                    <ul class="ModalMenu__list">
+                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">One</a></li>
+                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Two</a></li>
+                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Three</a></li>
+                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Four</a></li>
+                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Five</a></li>
+                    </ul>
+                </div>
             </div>
         </main>
+        <script>
+            (function(){
+                var openButton = document.querySelector('.NavButton')
+                var closeButton = document.querySelector('#modal-menu-close')
+                var menuModal = document.querySelector('#modal-menu')
+                openButton.addEventListener('click', function(){
+                    menuModal.style.display = 'block';
+                })
+                closeButton.addEventListener('click', function(){
+                    menuModal.style.display = 'none';
+                })
+            })();
+        </script>
     </body>
 </html>
