@@ -154,3 +154,13 @@
         width: 100%;
     }
 }
+
+.Footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255, 0.25);
+}
+.Footer__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
