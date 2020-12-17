@@ -74,6 +74,16 @@
                 background-image: url('./assets/img/bg.jpg');
                 box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
             }
+            @media screen and (max-width: 960px) {
+                .TitleScreen {
+                    background-image: url('./assets/img/bg960.jpg');
+                }
+            }
+            @media screen and (max-width: 460px) {
+                .TitleScreen {
+                    background-image: url('./assets/img/bg460.jpg');
+                }
+            }
             .MainBanner {
                 height: 60vh;
             }
@@ -86,6 +96,8 @@
                     min-width: 150px;
                     height: 28px;
                     margin-left: 5px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
                 .Header__label {
                     display: none;
