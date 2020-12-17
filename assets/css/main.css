@@ -43,7 +43,7 @@
 }
 .ContactsBlock__item {
     padding-left: 58px;
-    background-position: 10px center;
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     background-size: 32px;
     max-width: 33.3333%;
