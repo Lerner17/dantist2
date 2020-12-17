@@ -242,9 +242,11 @@
                 var menuModal = document.querySelector('#modal-menu')
                 openButton.addEventListener('click', function(){
                     menuModal.style.display = 'block';
+                    document.body.style.position = 'fixed';
                 })
                 closeButton.addEventListener('click', function(){
                     menuModal.style.display = 'none';
+                    document.body.style.position = 'static';
                 })
             })();
         </script>
