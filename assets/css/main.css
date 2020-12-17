@@ -38,7 +38,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 .ContactsBlock__item {
     padding-left: 48px;
@@ -74,3 +75,65 @@
     }
 }
 
+.HLBlock {
+    display: flex;
+    flex-wrap: wrap;
+}
+.HLBlock__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    width: 33.3333%;
+    box-sizing: border-box;
+    min-width: 310px;
+}
+.HLBlock__item:nth-child(1) {
+    background-color: #EE5D86;
+}
+.HLBlock__item:nth-child(2) {
+    background-color: #EB1651;
+}
+.HLBlock__item:nth-child(3) {
+    background-color: #6B0A25;
+}
+.HLBlock__header {
+    margin: 0;
+    margin-bottom: 20px;
+}
+.HLBlock__text {
+    margin: 0;
+    margin-bottom: auto;
+}
+.HLBlock__button {
+    padding: 8px 20px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.12s;
+}
+
+.HLBlock__button:hover,
+.HLBlock__button:focus {
+    background-color: rgba(0,0,0, 0.15);
+}
+.HLBlock__button:active {
+    background-color: rgba(0,0,0, 0.25);
+}
+.HLBlock__whRow {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255,255,255, 0.25);
+}
+@media screen and (max-width: 970px) {
+    .HLBlock__item {
+        width: 100%;
+    }
+    .HLBlock__text {
+        margin-bottom: 20px;
+    }
+}
