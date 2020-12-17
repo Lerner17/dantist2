@@ -43,6 +43,7 @@
             .Header__botContent {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
                 padding: 16px 0;
             }
             .Header__logo {
@@ -52,31 +53,6 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 font-size: 0;
-            }
-
-            .Nav {
-                display: flex;
-            }
-            .Nav__list {
-                display: flex;
-                align-items: center;
-                margin: 0;
-            }
-            .Nav__item {
-                list-style-type: none;
-            }
-            .Nav__link {
-                padding: 4px 12px;
-                color: white;
-                text-decoration: none;
-            }
-            .Nav__link:hover,
-            .Nav__link:focus {
-                border-bottom: 2px solid white;
-            }
-            .Nav__link:active,
-            .Nav__link.active {
-                border-bottom: 2px solid white;
             }
 
             .Header__phoneLink {
@@ -95,18 +71,11 @@
             .TitleScreen {
                 background-repeat: no-repeat;
                 background-position: top center;
-                /*background-attachment: fixed;*/
                 background-image: url('./assets/img/bg.jpg');
                 box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
             }
             .MainBanner {
                 height: 60vh;
-            }
-
-            .NavButton {
-                display: none;
-                background: none;
-                border: 0;
             }
 
             @media screen and (max-width: 680px) {
@@ -118,15 +87,6 @@
                     height: 28px;
                     margin-left: 5px;
                 }
-                .NavButton {
-                    display: block;
-                }
-                .Nav {
-                    display: none;
-                }
-            }
-            .ModalMenu {
-                display: none;
             }
         </style>
         <link rel="stylesheet" href="./assets/css/main.css" />
@@ -151,18 +111,9 @@
                             <div class="Header__logo">
                                 ДантистЪ
                             </div>
-                            <button class="NavButton" aria-label="Открыть меню">
-                                <img src="./assets/img/menu.svg" />
-                            </button>
-                            <nav class="Nav">
-                                <ul class="Nav__list">
-                                    <li class="Nav__item"><a class="Nav__link" href="#">One</a></li>
-                                    <li class="Nav__item"><a class="Nav__link" href="#">Two</a></li>
-                                    <li class="Nav__item"><a class="Nav__link" href="#">Three</a></li>
-                                    <li class="Nav__item"><a class="Nav__link" href="#">Four</a></li>
-                                    <li class="Nav__item"><a class="Nav__link" href="#">Five</a></li>
-                                </ul>
-                            </nav>
+                            <div class="Header__label">
+                                Стоматологическая клиника
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -194,12 +145,12 @@
                 <div class="HLBlock__item">
                     <h2 class="HLBlock__header">Наши врачи</h2>
                     <p class="HLBlock__text">Мы набираем только лучших специалистов в регионе, которые постоянно проходят повышение квалификации и любят своё дело.</p>
-                    <a href="#" class="HLBlock__button">Читать</a>
+                    <!--<a href="#" class="HLBlock__button">Читать</a>-->
                 </div>
                 <div class="HLBlock__item">
                     <h2 class="HLBlock__header">Лучшее оборудование</h2>
                     <p class="HLBlock__text">Мы постоянно обновляем наше оборудование и закупаем новейшие импортные и отечественные аппараты.</p>
-                    <a href="#" class="HLBlock__button">Читать</a>
+                    <!--<a href="#" class="HLBlock__button">Читать</a>-->
                 </div>
                 <div class="HLBlock__item">
                     <h2 class="HLBlock__header">Рабочие часы</h2>
@@ -217,38 +168,6 @@
             <br/>
             <br/>
             <br/>
-            <div id="modal-menu" class="ModalMenu">
-                <div class="ModalMenu__header">
-                    <div>Меню</div>
-                    <button id="modal-menu-close" aria-label="Закрыть меню">
-                        <img src="./assets/img/close.svg" />
-                    </button>
-                </div>
-                <div class="ModalMenu__body">
-                    <ul class="ModalMenu__list">
-                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">One</a></li>
-                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Two</a></li>
-                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Three</a></li>
-                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Four</a></li>
-                        <li class="ModalMenu__item"><a class="ModalMenu__link" href="#">Five</a></li>
-                    </ul>
-                </div>
-            </div>
         </main>
-        <script>
-            (function(){
-                var openButton = document.querySelector('.NavButton')
-                var closeButton = document.querySelector('#modal-menu-close')
-                var menuModal = document.querySelector('#modal-menu')
-                openButton.addEventListener('click', function(){
-                    menuModal.style.display = 'block';
-                    document.body.style.position = 'fixed';
-                })
-                closeButton.addEventListener('click', function(){
-                    menuModal.style.display = 'none';
-                    document.body.style.position = 'static';
-                })
-            })();
-        </script>
     </body>
 </html>
