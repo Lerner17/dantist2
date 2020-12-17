@@ -91,7 +91,7 @@
             .TitleScreen {
                 background-repeat: no-repeat;
                 background-position: top center;
-                background-position: fixed;
+                /*background-attachment: fixed;*/
                 background-image: url('./assets/img/bg.jpg');
                 box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
             }
@@ -138,7 +138,7 @@
                                 <a class="Header__phoneLink" href="tel:+74983197171"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/phone.svg"/>+7 (498) 319 - 71 - 71</a>
                             </div>
                             <div class="Header__topRight">
-                                <a class="Header__phoneLink" href="https://instagram.com/dantist_ko"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/instagram.svg"/>dantist_ko</a>
+                                <a aria-label="Наш инстаграм" class="Header__phoneLink" href="https://instagram.com/dantist_ko"><img class="Header__phoneLinkImage" width="14" height="14" src="./assets/img/instagram.svg"/>dantist_ko</a>
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                 <div class="HLBlock__item">
                     <h2 class="HLBlock__header">Рабочие часы</h2>
                     <div class="HLBlock__whRow">
-                        <span>Пн – Пт</span>
+                        <span aria-label="с понедельника по пятницу">Пн – Пт</span>
                         <span>10:00 – 21:30</span>
                     </div>
                     <div class="HLBlock__whRow">
