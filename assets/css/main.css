@@ -66,6 +66,14 @@
     font-weight: normal;
     color: rgba(255,255,255, 0.75);
 }
+.ContactsBlock__value a,
+.ContactsBlock__value img {
+    vertical-align: baseline;
+}
+.ContactsBlock__value a {
+    display: inline-block;
+    margin-bottom: 10px;
+}
 
 @media screen and (max-width: 970px) {
     .ContactsBlock__item, 
